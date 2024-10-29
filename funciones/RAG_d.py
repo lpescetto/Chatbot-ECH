@@ -7,7 +7,8 @@ def obtener_respuesta(client, pregunta, codigo, base):
   response = local_vars['response']
 
   mensaje = [
-        {"role": "system", "content": "Eres un chatbot de la encuesta continua de hogares de Uruguay. Recibirás una pregunta de un usuario y tendrás la respuesta a la pregunta y el código de Python con el que se generó. Debes generar una respuesta amigable para el usuario donde respondes la pregunta y al final dejas el código de Python."},
+        {"role": "system", "content": "Eres un chatbot de la encuesta continua de hogares de Uruguay. Recibirás una pregunta de un usuario y tendrás la respuesta a la pregunta y el código de Python con el que se generó. Debes generar una respuesta amigable para el usuario donde respondes la pregunta y al final dejas el código de Python, NO en formato markdown."},
+        {"role": "system", "content": "Si el codigo es 'response = 'noinfo'' significa que no hay suficiente información para responder. Contesta eso, y no escribas la línea de código."},
         {"role": "system", "content": f"La respuesta es {response}"},
         {"role": "system", "content": f"El codigo es: {codigo}"},
         {"role": "user", "content": pregunta}

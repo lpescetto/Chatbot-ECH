@@ -1,11 +1,14 @@
 import json
 import numpy as np
+import os
+
+from funciones.crear_embedding import generar_embedding
 
 # Función para obtener código de Python
 def obtener_codigo_py(client, pregunta, k=30):
 
     # Cargar los embeddings y los textos desde el archivo JSON
-    with open('variables_ech_emb.json', 'r') as f:
+    with open('variables_ech_emb.json', 'r', encoding='utf-8') as f:
         data = json.load(f)
     
     # Extraer embeddings y preguntas
@@ -14,7 +17,7 @@ def obtener_codigo_py(client, pregunta, k=30):
     ids = [item['ID'] for item in data]
     
     # Generar el embedding para la pregunta del usuario
-    pregunta_embedding = generar_embedding(pregunta)
+    pregunta_embedding = generar_embedding(pregunta, client)
 
     # Convertir los embeddings almacenados y la pregunta en arrays de NumPy
     embeddings_array = np.vstack(embeddings)
