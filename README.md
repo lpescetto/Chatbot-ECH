@@ -20,6 +20,10 @@ es el archivo 'variables_ech_emb.json'.
 
 Algunos ejemplos de consultas que el chatbot es capaz de responder correctamente:
 
--
+- ¿Cuál es la edad promedio de las mujeres de Durazno?
+- ¿Cuántas personas hay en promedio en los hogares de Montevideo?
+- ¿Qué porcentaje de Maldonado saber leer y escribir?
+- ¿Qué porcentaje de personas tienen un ingreso superior a $30000?
+- ¿Cuál es la diferencia entre el ingreso promedio de Montevideo y Artigas?
 
-El chatbot se puede utilizar en el archivo 'chatbot.ipynb'.
+El chatbot se puede utilizar en el notebook 'chatbot.ipynb'.
